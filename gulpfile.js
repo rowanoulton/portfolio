@@ -23,4 +23,5 @@ gulp.task('watch', function () {
     gulp.watch('./src/img/*', ['images']);
 });
 
+gulp.task('build', ['images', 'compass']);
 gulp.task('default', ['watch']);
