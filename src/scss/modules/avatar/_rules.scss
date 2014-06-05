@@ -4,7 +4,7 @@
         // Cheap & nasty vertical centering
         position: relative;
         top: 50%;
-        margin-top: -173px;
+        margin-top: $avatar-vertical-offset;
         text-align: center;
     }
 

@@ -1,3 +1,7 @@
+// .avatar
+$avatar-height: 345px;
+$avatar-vertical-offset: (-1 * ceil($avatar-height / 2));
+
 // .avatar-title
 $avatar-title-font-size: 24px !default;
 $avatar-title-letter-spacing: 1px !default;
