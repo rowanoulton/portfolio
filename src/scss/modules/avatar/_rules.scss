@@ -36,6 +36,7 @@
     .avatar-link-list-item {
         margin: $avatar-link-list-item-margin;
         display: inline-block;
+        vertical-align: middle;
 
         a {
             @include transition-property(opacity);
