@@ -1,0 +1,49 @@
+@import "modules/avatar/variables";
+@mixin avatar {
+    .avatar {
+        // Cheap & nasty vertical centering
+        position: relative;
+        top: 50%;
+        margin-top: -173px;
+        text-align: center;
+    }
+
+    .avatar-img {
+        
+    }
+
+    .avatar-title {
+        margin: $avatar-title-margin;
+        font-size: $avatar-title-font-size;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: $avatar-title-letter-spacing;
+    }
+
+    .avatar-description {
+        margin: 0;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        font-size: $avatar-descrption-font-size;
+    }
+
+    .avatar-link-list {
+        margin: $avatar-link-list-margin;
+        padding: 0;
+        list-style: none;
+    }
+
+    .avatar-link-list-item {
+        margin: $avatar-link-list-item-margin;
+        display: inline-block;
+
+        a {
+            @include transition-property(opacity);
+            @include transition-duration($avatar-link-list-item-transition-duration);
+            @include transition-timing-function(ease-in-out);
+            opacity: $avatar-link-list-item-opacity;
+
+            &:hover { opacity: $avatar-link-list-item-opacity-over; }
+        }
+    }
+}
