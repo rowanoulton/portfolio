@@ -1,4 +1,4 @@
-@import "vendor/normalize";
 @import "compass/css3";
-
-@include normalize;
+@import "vendor/normalize";
+@import "base";
+@import "layout";
