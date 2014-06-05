@@ -9,5 +9,17 @@ body {
 body {
     background: $bg-colour;
     font-family: 'Montserrat', sans-serif;
-    color: #3d1e2d;
+    color: $text-colour;
+}
+
+a {
+    @include transition-property(color);
+    @include transition-duration(0.1s);
+    @include transition-timing-function(ease-in-out);
+    color: $text-colour;
+    text-decoration: none;
+
+    &:hover {
+        color: darken($text-colour, 25%);
+    }
 }
