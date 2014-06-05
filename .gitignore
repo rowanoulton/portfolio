@@ -1,0 +1,9 @@
+# NPM
+node_modules/
+
+# SASS
+.sass-cache/
+
+# Assets
+assets/img/
+assets/css/
