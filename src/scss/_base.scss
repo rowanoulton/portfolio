@@ -1,5 +1,21 @@
 $text-colour: #3d1e2d !default;
+$light-text-colour: #999 !default;
 $bg-colour: #efefef !default;
+
+// section
+$section-z-index: 100 !default;
+
+// footer
+$footer-offset: 25px !default;
+$footer-opacity: 0.5 !default;
+$footer-transition-duration: 0.2s !default;
+$footer-opacity-over: 1 !default;
+$footer-z-index: $section-z-index - 10 !default;
+
+// links
+$link-transition-duration: 0.1s !default;
+$link-color: $text-colour !default;
+$link-color-over: darken($text-colour, 25%) !default;
 
 html,
 body {
@@ -12,14 +28,38 @@ body {
     color: $text-colour;
 }
 
+section {
+    z-index: $section-z-index;
+}
+
+footer {
+    @include transition-property(opacity);
+    @include transition-duration($footer-transition-duration);
+    @include transition-timing-function(ease-in-out);
+    position: absolute;
+    bottom: $footer-offset;
+    left: 0;
+    right: 0;
+    z-index: $footer-z-index;
+    opacity: $footer-opacity;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    color: $light-text-colour;
+
+    &:hover {
+        opacity: $footer-opacity-over;
+    }
+}
+
 a {
     @include transition-property(color);
-    @include transition-duration(0.1s);
+    @include transition-duration($link-transition-duration);
     @include transition-timing-function(ease-in-out);
-    color: $text-colour;
+    color: $link-color;
     text-decoration: none;
 
     &:hover {
-        color: darken($text-colour, 25%);
+        color: $link-color-over;
     }
 }
