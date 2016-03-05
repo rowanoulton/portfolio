@@ -1,6 +1,6 @@
 ## Portfolio website
 
-A basic website build for [rowanoulton.com](http://rowanoulton.com).
+A basic portfolio website build
 
 ![rowanoulton.com](http://i.imgur.com/uMItZMB.png)
 
